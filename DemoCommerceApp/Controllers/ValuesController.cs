@@ -10,8 +10,22 @@ namespace DemoCommerceApp.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        // GET api/values
         [HttpGet]
+        public string HelloWorld()
+        {
+            return "Hello World!!";
+        }
+       // [HttpGet]
+        public ActionResult<IEnumerable<string>> Get12()
+        {
+            return new string[]
+            {
+                "value1", "value2", "value3", "value4"
+            };
+        }
+
+        // GET api/values
+        //[HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
